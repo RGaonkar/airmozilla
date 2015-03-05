@@ -62,7 +62,7 @@ dependencies. You do this with:
 
     pip install -r requirements.txt
     pip install -r dev-requirements.txt
-
+These two files are available in the airmozilla respository, after you clone it from github
 The second file is necessary so you can
 
 **Step 2 - Get the code**
@@ -81,6 +81,23 @@ git config --global url."https://".insteadOf git://
 ```
 git clone https://github.com/mozilla/airmozilla.git
 cd airmozilla
+```
+There are some more packages required before running pip install -r requirements.txt. You might get errors stating that the following packages (stated below) are not found. Please install them using the following commands.
+They are as follows:
+1) python-psycopg2 (Psycopg is a PostgreSQL adapter for the Python programming language. It is a wrapper for the libpq, the official PostgreSQL client library)- 
+```
+sudo apt-get install python-psycopg2
+```
+2) libpq-dev (Header files and static library for compiling C programs to link with the libpq library in order to communicate with a PostgreSQL database backend)- 
+```
+sudo apt-get install libpq-dev
+```
+3) libxml2-dev package (Development files for the GNOME XML library) and the libxslt1-dev (XSLT 1.0 processing library - development kit) -
+```
+sudo apt-get install libxml2-dev libxslt1-dev 
+```
+This should ensure correct intallation of all the packages mentioned in requirements.txt
+```
 pip install -r requirements.txt
 ```
 
