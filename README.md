@@ -241,7 +241,7 @@ CACHES = {
 After this you can run the app by doing:
 
 ```
-docker-compose up
+sudo docker-compose up
 ```
 
 With this the Django test server will we running, so if your are on Linux you
